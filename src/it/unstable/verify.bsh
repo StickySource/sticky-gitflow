@@ -1,0 +1,12 @@
+import java.io.*;
+
+File file = new File( basedir, "target/classes/project.properties" );
+if ( !file.isFile() ) {
+    throw new FileNotFoundException( "Could not find build log: " + file );
+}
+
+String content = new Scanner(file).useDelimiter("\\Z").next();
+
+if (!content.contains("net.stickycode.plugins.gitflow.unstable")) {
+  throw new Exception("Expected group id to container 'unstable' but got " + content);
+}
