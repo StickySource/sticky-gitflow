@@ -9,7 +9,7 @@ import org.apache.maven.plugin.MojoFailureException;
 import org.assertj.core.util.Files;
 import org.junit.Test;
 
-public class GitFlowMojoTest {
+public class GitFlowExtensionTest {
 
   @Test
   public void branch() throws MojoExecutionException, MojoFailureException {

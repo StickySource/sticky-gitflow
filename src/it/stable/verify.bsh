@@ -7,6 +7,6 @@ if ( !file.isFile() ) {
 
 String content = new Scanner(file).useDelimiter("\\Z").next();
 
-if (!content.contains("net.stickycode.gitflow.unstable")) {
-  throw new Exception("Expected group id to contain 'unstable' but got " + content);
+if (!content.contains("net.stickycode.gitflow.stable")) {
+  throw new Exception("Expected group id to contain 'stable' but got " + content);
 }
